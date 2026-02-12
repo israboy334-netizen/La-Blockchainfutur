@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockChain Future - Cryptomonnaies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube"></i> Block<span>Chain</span>Future
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+           <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="nav-link">Accueil</a></li>
+    <li><a href="about.html" class="nav-link">À Propos</a></li>
+    <li><a href="blockchain.html" class="nav-link">Blockchain</a></li>
+    <li><a href="crypto.html" class="nav-link">Cryptomonnaies</a></li>
+    <li><a href="exchanges.html" class="nav-link">Échanges</a></li> <!-- NOUVEAU LIEN -->
+    <li><a href="mining.html" class="nav-link">Mining</a></li>
+    <li><a href="wallet.html" class="nav-link">Wallet</a></li>
+    <li><a href="trading.html" class="nav-link">Trading</a></li>
+    <li><a href="defi.html" class="nav-link">DeFi</a></li>
+    <li><a href="nft.html" class="nav-link">NFT</a></li>
+    <li><a href="security.html" class="nav-link">Sécurité</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+</ul>
+        </div>
+    </nav>
+
+    <!-- Crypto Hero -->
+    <section class="hero" style="min-height: 60vh; padding: 150px 0 80px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Cryptomonnaies</h1>
+                <p>Investissez dans les cryptomonnaies les plus prometteuses avec notre plateforme sécurisée.</p>
+            </div>
+        </div>
+        <!-- Dans crypto.html, dans la section hero, ajoutez ce bouton -->
+<div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+    <a href="exchanges.html" class="btn">Voir les Plateformes</a>
+    <a href="#crypto-grid" class="btn btn-outline">Explorer les Cryptos</a>
+</div>
+    </section>
+
+    <!-- Crypto Grid -->
+    <section class="crypto-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Principales Cryptomonnaies</h2>
+                <p>Suivez les prix en temps réel et investissez en toute sécurité.</p>
+            </div>
+            
+            <div class="crypto-grid">
+                <div class="crypto-card">
+                    <div class="crypto-header">
+                        <div class="crypto-icon">
+                            <i class="fab fa-bitcoin"></i>
+                        </div>
+                        <div class="crypto-name">
+                            <h3>Bitcoin</h3>
+                            <p>BTC</p>
+                        </div>
+                    </div>
+                    <div class="crypto-price" id="btc-price">€42,850.75</div>
+                    <div class="price-change up" id="btc-change">+2.45%</div>
+                    <p style="margin-top: 15px; color: var(--gray);">La cryptomonnaie originale et la plus reconnue, souvent appelée "or numérique".</p>
+                    <a href="#" class="btn" style="margin-top: 20px; padding: 10px 20px; display: inline-block;">Investir</a>
+                </div>
+                
+                <div class="crypto-card">
+                    <div class="crypto-header">
+                        <div class="crypto-icon">
+                            <i class="fab fa-ethereum"></i>
+                        </div>
+                        <div class="crypto-name">
+                            <h3>Ethereum</h3>
+                            <p>ETH</p>
+                        </div>
+                    </div>
+                    <div class="crypto-price" id="eth-price">€2,950.30</div>
+                    <div class="price-change up" id="eth-change">+1.89%</div>
+                    <p style="margin-top: 15px; color: var(--gray);">Plateforme de contrats intelligents leader pour les applications décentralisées.</p>
+                    <a href="#" class="btn" style="margin-top: 20px; padding: 10px 20px; display: inline-block;">Investir</a>
+                </div>
+                
+                <div class="crypto-card">
+                    <div class="crypto-header">
+                        <div class="crypto-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="crypto-name">
+                            <h3>Blockman Coin</h3>
+                            <p>BMC</p>
+                        </div>
+                    </div>
+                    <div class="crypto-price" id="bmc-price">€18.65</div>
+                    <div class="price-change up" id="bmc-change">+5.32%</div>
+                    <p style="margin-top: 15px; color: var(--gray);">Notre cryptomonnaie native pour alimenter l'écosystème Blockman avec frais minimes.</p>
+                    <a href="#" class="btn" style="margin-top: 20px; padding: 10px 20px; display: inline-block;">Investir</a>
+                </div>
+                
+                <div class="crypto-card">
+                    <div class="crypto-header">
+                        <div class="crypto-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="crypto-name">
+                            <h3>Cardano</h3>
+                            <p>ADA</p>
+                        </div>
+                    </div>
+                    <div class="crypto-price" id="ada-price">€0.48</div>
+                    <div class="price-change down" id="ada-change">-0.75%</div>
+                    <p style="margin-top: 15px; color: var(--gray);">Plateforme blockchain de troisième génération axée sur la durabilité et l'évolutivité.</p>
+                    <a href="#" class="btn" style="margin-top: 20px; padding: 10px 20px; display: inline-block;">Investir</a>
+                </div>
+                
+                <div class="crypto-card">
+                    <div class="crypto-header">
+                        <div class="crypto-icon">
+                            <i class="fab fa-google-wallet"></i>
+                        </div>
+                        <div class="crypto-name">
+                            <h3>Solana</h3>
+                            <p>SOL</p>
+                        </div>
+                    </div>
+                    <div class="crypto-price">€95.20</div>
+                    <div class="price-change up">+3.15%</div>
+                    <p style="margin-top: 15px; color: var(--gray);">Blockchain haute performance conçue pour les applications décentralisées à grande échelle.</p>
+                    <a href="#" class="btn" style="margin-top: 20px; padding: 10px 20px; display: inline-block;">Investir</a>
+                </div>
+                
+                <div class="crypto-card">
+                    <div class="crypto-header">
+                        <div class="crypto-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="crypto-name">
+                            <h3>Tether</h3>
+                            <p>USDT</p>
+                        </div>
+                    </div>
+                    <div class="crypto-price">€0.99</div>
+                    <div class="price-change up">+0.01%</div>
+                    <p style="margin-top: 15px; color: var(--gray);">Stablecoin indexé sur le dollar américain pour des transactions stables.</p>
+                    <a href="#" class="btn" style="margin-top: 20px; padding: 10px 20px; display: inline-block;">Investir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trading Platform -->
+    <section class="trading-section" style="background-color: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Plateforme de Trading</h2>
+                <p>Tradez en toute sécurité avec nos outils avancés.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analyses Avancées</h3>
+                    <p>Outils d'analyse technique et graphiques en temps réel pour prendre les meilleures décisions d'investissement.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Trading Automatique</h3>
+                    <p>Créez des bots de trading personnalisés avec notre interface intuitive sans code.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Sécurité Maximale</h3>
+                    <p>95% des fonds stockés hors ligne dans des coffres-forts physiques à travers le monde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>BlockChain Future</h3>
+                    <p>Leader dans la technologie blockchain et les solutions cryptomonnaies innovantes.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens Rapides</h3>
+                    <a href="index.html">Accueil</a>
+                    <a href="about.html">À Propos</a>
+                    <a href="blockchain.html">Blockchain</a>
+                    <a href="crypto.html">Cryptomonnaies</a>
+                    <a href="mining.html">Mining</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <a href="wallet.html">Wallet</a>
+                    <a href="defi.html">DeFi</a>
+                    <a href="nft.html">NFT</a>
+                    <a href="security.html">Sécurité</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Abonnez-vous pour recevoir les dernières actualités.</p>
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Votre email">
+                        <button class="newsletter-btn">S'abonner</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 BlockChain Future. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
