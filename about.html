@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockChain Future - À Propos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques pour la page À Propos */
+        .about-image-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 400px;
+            transition: all 0.5s ease;
+        }
+        
+        .about-image-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .about-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0,102,255,0.7), rgba(0,255,170,0.5));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .about-image-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .team-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .team-member {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        
+        .member-photo {
+            height: 200px;
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .member-photo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+        }
+        
+        .member-info {
+            padding: 25px;
+        }
+        
+        .member-role {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .member-social a {
+            color: var(--gray);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .member-social a:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .achievement-item {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(0, 102, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .achievement-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        
+        .achievement-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .achievement-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .floating-icon {
+            animation: float 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube"></i> Block<span>Chain</span>Future
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link active">À Propos</a></li>
+                <li><a href="blockchain.html" class="nav-link">Blockchain</a></li>
+                <li><a href="crypto.html" class="nav-link">Cryptomonnaies</a></li>
+                <li><a href="exchanges.html" class="nav-link">Échanges</a></li>
+                <li><a href="trading.html" class="nav-link">Trading</a></li>
+                <li><a href="mining.html" class="nav-link">Mining</a></li>
+                <li><a href="wallet.html" class="nav-link">Wallet</a></li>
+                <li><a href="defi.html" class="nav-link">DeFi</a></li>
+                <li><a href="nft.html" class="nav-link">NFT</a></li>
+                <li><a href="security.html" class="nav-link">Sécurité</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="hero" style="min-height: 60vh; padding: 150px 0 80px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>À Propos de Nous</h1>
+                <p>Découvrez notre mission, notre vision et notre équipe d'experts en technologie blockchain.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image-container">
+                    <div class="about-image-overlay">
+                        <div class="about-image-icon floating-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3 style="color: white; margin-bottom: 10px;">Notre Équipe</h3>
+                        <p style="color: rgba(255,255,255,0.9);">Des experts passionnés par la technologie blockchain</p>
+                        <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                            <span style="background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">Innovation</span>
+                            <span style="background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">Sécurité</span>
+                            <span style="background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">Transparence</span>
+                        </div>
+                    </div>
+                    <!-- L'image serait ici en arrière-plan, mais nous utilisons un overlay coloré -->
+                </div>
+                
+                <div class="about-text">
+                    <h3>Notre Histoire</h3>
+                    <p>Fondée en 2017, BlockChain Future est née d'une conviction profonde : la blockchain va révolutionner notre société. Notre équipe de pionniers a développé la technologie Blockman, une blockchain de 4ème génération qui surpasse toutes les solutions existantes.</p>
+                    <p>Nous croyons en un futur décentralisé où chaque individu reprend le contrôle de ses données et de ses actifs financiers. Notre mission est de rendre cette technologie accessible à tous, sans compromis sur la sécurité ou la performance.</p>
+                    
+                    <h3 style="margin-top: 30px;">Notre Vision</h3>
+                    <p>Nous imaginons un monde où les transactions sont transparentes, sécurisées et accessibles à tous. Un monde où la technologie blockchain facilite la vie quotidienne, renforce la confiance et crée de nouvelles opportunités économiques.</p>
+                    
+                    <div class="stats" style="margin-top: 40px;">
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div>Utilisateurs actifs</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">$2B+</div>
+                            <div>Actifs sécurisés</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">120+</div>
+                            <div>Pays desservis</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div>Support client</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section" style="background-color: rgba(255,255,255,0.02); padding: 80px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Réalisations</h2>
+                <p>Des chiffres qui témoignent de notre croissance et de notre impact.</p>
+            </div>
+            
+            <div class="achievements">
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="achievement-number">+300%</div>
+                    <p>Croissance annuelle</p>
+                </div>
+                
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="achievement-number">100%</div>
+                    <p>Sécurité des fonds</p>
+                </div>
+                
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="achievement-number">2s</div>
+                    <p>Temps de transaction moyen</p>
+                </div>
+                
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="achievement-number">-99%</div>
+                    <p>Consommation énergétique</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Notre Équipe</h2>
+                <p>Rencontrez les experts qui construisent l'avenir de la blockchain.</p>
+            </div>
+            
+            <div class="team-gallery">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; color: rgba(255,255,255,0.9);">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Alexandre Martin</h3>
+                        <div class="member-role">CEO & Fondateur</div>
+                        <p>Expert Blockchain avec 10 ans d'expérience dans les technologies financières.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; color: rgba(255,255,255,0.9);">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sophie Dubois</h3>
+                        <div class="member-role">CTO</div>
+                        <p>Développeuse blockchain, ancienne ingénieure chez Google et spécialiste en cryptographie.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; color: rgba(255,255,255,0.9);">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Thomas Leroy</h3>
+                        <div class="member-role">Responsable Financier</div>
+                        <p>Expert en cryptomonnaies avec un background en finance traditionnelle.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-medium"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; color: rgba(255,255,255,0.9);">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Camille Moreau</h3>
+                        <div class="member-role">Responsable Sécurité</div>
+                        <p>Spécialiste en cybersécurité avec 8 ans d'expérience dans la protection des données.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-keybase"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section" style="background-color: rgba(255,255,255,0.02); padding: 80px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Valeurs</h2>
+                <p>Les principes qui guident chacune de nos actions.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Transparence</h3>
+                    <p>Toutes nos transactions sont vérifiables sur la blockchain. Nous croyons en une communication ouverte et honnête avec notre communauté.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Sécurité</h3>
+                    <p>La sécurité de nos utilisateurs est notre priorité absolue. Nous mettons en œuvre les standards de sécurité les plus élevés de l'industrie.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Nous repoussons constamment les limites de la technologie blockchain pour offrir des solutions innovantes et disruptives.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Accessibilité</h3>
+                    <p>Nous rendons la technologie blockchain accessible à tous, des débutants aux experts, sans compromis sur la qualité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>BlockChain Future</h3>
+                    <p>Leader dans la technologie blockchain et les solutions cryptomonnaies innovantes.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens Rapides</h3>
+                    <a href="index.html">Accueil</a>
+                    <a href="about.html">À Propos</a>
+                    <a href="blockchain.html">Blockchain</a>
+                    <a href="crypto.html">Cryptomonnaies</a>
+                    <a href="exchanges.html">Échanges</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <a href="mining.html">Mining</a>
+                    <a href="wallet.html">Wallet</a>
+                    <a href="defi.html">DeFi</a>
+                    <a href="nft.html">NFT</a>
+                    <a href="security.html">Sécurité</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Abonnez-vous pour recevoir les dernières actualités.</p>
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Votre email">
+                        <button class="newsletter-btn">S'abonner</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 BlockChain Future. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Script spécifique pour la page À Propos
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animation des membres de l'équipe
+            const teamMembers = document.querySelectorAll('.team-member');
+            
+            teamMembers.forEach((member, index) => {
+                member.style.opacity = '0';
+                member.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    member.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    member.style.opacity = '1';
+                    member.style.transform = 'translateY(0)';
+                }, 200 * index);
+            });
+            
+            // Animation des réalisations
+            const achievementNumbers = document.querySelectorAll('.achievement-number');
+            
+            achievementNumbers.forEach(number => {
+                const finalValue = number.textContent;
+                let currentValue = 0;
+                
+                // Animer les chiffres
+                const animateNumber = () => {
+                    if (currentValue < parseFloat(finalValue.replace('+', '').replace('%', ''))) {
+                        currentValue += parseFloat(finalValue) / 20;
+                        number.textContent = Math.floor(currentValue) + finalValue.replace(/[0-9]/g, '');
+                        setTimeout(animateNumber, 50);
+                    } else {
+                        number.textContent = finalValue;
+                    }
+                };
+                
+                // Démarrer l'animation quand l'élément est visible
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateNumber();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(number);
+            });
+            
+            // Animation de l'image au survol
+            const aboutImage = document.querySelector('.about-image-container');
+            if (aboutImage) {
+                aboutImage.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.about-image-icon');
+                    icon.style.transform = 'scale(1.2) rotate(10deg)';
+                });
+                
+                aboutImage.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.about-image-icon');
+                    icon.style.transform = 'scale(1) rotate(0deg)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
