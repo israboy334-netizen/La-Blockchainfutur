@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockChain Future - Plateformes d'Échange</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube"></i> Block<span>Chain</span>Future
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À Propos</a></li>
+                    <li><a href="blockchain.html" class="nav-link">Blockchain</a></li>
+                    <li><a href="crypto.html" class="nav-link">Cryptomonnaies</a></li>
+                    <li><a href="exchanges.html" class="nav-link">Échanges</a></li> <!-- NOUVEAU LIEN -->
+                    <li><a href="mining.html" class="nav-link">Mining</a></li>
+                    <li><a href="wallet.html" class="nav-link">Wallet</a></li>
+                    <li><a href="defi.html" class="nav-link">DeFi</a></li>
+                    <li><a href="nft.html" class="nav-link">NFT</a></li>
+                    <li><a href="security.html" class="nav-link">Sécurité</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+        </div>
+    </nav>
+
+    <!-- Exchanges Hero -->
+    <section class="hero" style="min-height: 60vh; padding: 150px 0 80px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Plateformes d'Échange</h1>
+                <p>Découvrez les meilleures plateformes pour acheter, vendre et échanger vos cryptomonnaies en toute sécurité.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exchanges Section -->
+    <section class="exchanges-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Les Meilleures Plateformes</h2>
+                <p>Comparez et choisissez la plateforme qui correspond le mieux à vos besoins d'investissement.</p>
+            </div>
+            
+            <div class="exchanges-grid">
+                <!-- Binance Card -->
+                <div class="exchange-card">
+                    <div class="exchange-logo">
+                        <div class="logo-circle" style="background: linear-gradient(135deg, #F0B90B, #FCD535);">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Binance</h3>
+                    </div>
+                    <div class="exchange-info">
+                        <p><strong>Volume quotidien:</strong> $20+ milliards</p>
+                        <p><strong>Frais de trading:</strong> 0.1%</p>
+                        <p><strong>Cryptomonnaies:</strong> 350+</p>
+                        <p><strong>Pays supportés:</strong> 180+</p>
+                    </div>
+                    <div class="exchange-features">
+                        <span class="feature-tag">Staking</span>
+                        <span class="feature-tag">Futures</span>
+                        <span class="feature-tag">NFT</span>
+                        <span class="feature-tag">Savings</span>
+                    </div>
+                    <div class="exchange-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7/5</span>
+                        </div>
+                    </div>
+                    <a href="https://www.binance.com" target="_blank" class="btn" style="margin-top: 20px; width: 100%;">Visiter Binance</a>
+                </div>
+                
+                <!-- Trust Wallet Card -->
+                <div class="exchange-card">
+                    <div class="exchange-logo">
+                        <div class="logo-circle" style="background: linear-gradient(135deg, #3375BB, #4A90E2);">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3>Trust Wallet</h3>
+                    </div>
+                    <div class="exchange-info">
+                        <p><strong>Type:</strong> Wallet + DEX</p>
+                        <p><strong>Actifs supportés:</strong> 4M+</p>
+                        <p><strong>Blockchains:</strong> 65+</p>
+                        <p><strong>Staking:</strong> Oui</p>
+                    </div>
+                    <div class="exchange-features">
+                        <span class="feature-tag">Multi-chain</span>
+                        <span class="feature-tag">DEX</span>
+                        <span class="feature-tag">NFT</span>
+                        <span class="feature-tag">Mobile</span>
+                    </div>
+                    <div class="exchange-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.9/5</span>
+                        </div>
+                    </div>
+                    <a href="https://trustwallet.com" target="_blank" class="btn" style="margin-top: 20px; width: 100%;">Visiter Trust Wallet</a>
+                </div>
+                
+                <!-- SafePal Card -->
+                <div class="exchange-card">
+                    <div class="exchange-logo">
+                        <div class="logo-circle" style="background: linear-gradient(135deg, #4C6FFF, #6B8EFF);">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>SafePal</h3>
+                    </div>
+                    <div class="exchange-info">
+                        <p><strong>Type:</strong> Hardware + Software</p>
+                        <p><strong>Actifs supportés:</strong> 10,000+</p>
+                        <p><strong>Sécurité:</strong> Matérielle</p>
+                        <p><strong>DEX intégré:</strong> Oui</p>
+                    </div>
+                    <div class="exchange-features">
+                        <span class="feature-tag">Hardware</span>
+                        <span class="feature-tag">Software</span>
+                        <span class="feature-tag">DEX</span>
+                        <span class="feature-tag">Secure</span>
+                    </div>
+                    <div class="exchange-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5/5</span>
+                        </div>
+                    </div>
+                    <a href="https://safepal.io" target="_blank" class="btn" style="margin-top: 20px; width: 100%;">Visiter SafePal</a>
+                </div>
+                
+                <!-- PayPal Card -->
+                <div class="exchange-card">
+                    <div class="exchange-logo">
+                        <div class="logo-circle" style="background: linear-gradient(135deg, #003087, #009CDE);">
+                            <i class="fab fa-paypal"></i>
+                        </div>
+                        <h3>PayPal</h3>
+                    </div>
+                    <div class="exchange-info">
+                        <p><strong>Type:</strong> Payment + Crypto</p>
+                        <p><strong>Utilisateurs:</strong> 400M+</p>
+                        <p><strong>Cryptomonnaies:</strong> 5+</p>
+                        <p><strong>Pays:</strong> USA/UK uniquement</p>
+                    </div>
+                    <div class="exchange-features">
+                        <span class="feature-tag">Easy</span>
+                        <span class="feature-tag">Secure</span>
+                        <span class="feature-tag">Fiat</span>
+                        <span class="feature-tag">Buy/Sell</span>
+                    </div>
+                    <div class="exchange-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.8/5</span>
+                        </div>
+                    </div>
+                    <a href="https://www.paypal.com" target="_blank" class="btn" style="margin-top: 20px; width: 100%;">Visiter PayPal</a>
+                </div>
+                
+                <!-- Coinbase Card -->
+                <div class="exchange-card">
+                    <div class="exchange-logo">
+                        <div class="logo-circle" style="background: linear-gradient(135deg, #0052FF, #2A5AFF);">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h3>Coinbase</h3>
+                    </div>
+                    <div class="exchange-info">
+                        <p><strong>Volume quotidien:</strong> $2+ milliards</p>
+                        <p><strong>Frais:</strong> 0.5% - 4.5%</p>
+                        <p><strong>Cryptomonnaies:</strong> 150+</p>
+                        <p><strong>IPO:</strong> Nasdaq: COIN</p>
+                    </div>
+                    <div class="exchange-features">
+                        <span class="feature-tag">Regulated</span>
+                        <span class="feature-tag">Staking</span>
+                        <span class="feature-tag">Wallet</span>
+                        <span class="feature-tag">Card</span>
+                    </div>
+                    <div class="exchange-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.6/5</span>
+                        </div>
+                    </div>
+                    <a href="https://www.coinbase.com" target="_blank" class="btn" style="margin-top: 20px; width: 100%;">Visiter Coinbase</a>
+                </div>
+                
+                <!-- Kraken Card -->
+                <div class="exchange-card">
+                    <div class="exchange-logo">
+                        <div class="logo-circle" style="background: linear-gradient(135deg, #5846A5, #6B5AB5);">
+                            <i class="fas fa-anchor"></i>
+                        </div>
+                        <h3>Kraken</h3>
+                    </div>
+                    <div class="exchange-info">
+                        <p><strong>Volume quotidien:</strong> $1+ milliards</p>
+                        <p><strong>Frais de trading:</strong> 0.16% - 0.26%</p>
+                        <p><strong>Cryptomonnaies:</strong> 90+</p>
+                        <p><strong>Fondé en:</strong> 2011</p>
+                    </div>
+                    <div class="exchange-features">
+                        <span class="feature-tag">Futures</span>
+                        <span class="feature-tag">Margin</span>
+                        <span class="feature-tag">Staking</span>
+                        <span class="feature-tag">OTC</span>
+                    </div>
+                    <div class="exchange-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0/5</span>
+                        </div>
+                    </div>
+                    <a href="https://www.kraken.com" target="_blank" class="btn" style="margin-top: 20px; width: 100%;">Visiter Kraken</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section" style="background-color: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tableau Comparatif</h2>
+                <p>Comparez les principales caractéristiques des différentes plateformes.</p>
+            </div>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Plateforme</th>
+                            <th>Frais</th>
+                            <th>Nombre de Cryptos</th>
+                            <th>Sécurité</th>
+                            <th>Facilité d'utilisation</th>
+                            <th>Note globale</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Binance</strong></td>
+                            <td>0.1%</td>
+                            <td>350+</td>
+                            <td>Élevée</td>
+                            <td>Moyenne</td>
+                            <td><span class="rating-badge">4.7/5</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trust Wallet</strong></td>
+                            <td>0.25% (DEX)</td>
+                            <td>4M+ (tokens)</td>
+                            <td>Très Élevée</td>
+                            <td>Facile</td>
+                            <td><span class="rating-badge">4.9/5</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>SafePal</strong></td>
+                            <td>0.3% (DEX)</td>
+                            <td>10,000+</td>
+                            <td>Maximum</td>
+                            <td>Moyenne</td>
+                            <td><span class="rating-badge">4.5/5</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>PayPal</strong></td>
+                            <td>2.3% - 3.5%</td>
+                            <td>5</td>
+                            <td>Élevée</td>
+                            <td>Très Facile</td>
+                            <td><span class="rating-badge">4.8/5</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Coinbase</strong></td>
+                            <td>0.5% - 4.5%</td>
+                            <td>150+</td>
+                            <td>Élevée</td>
+                            <td>Très Facile</td>
+                            <td><span class="rating-badge">4.6/5</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kraken</strong></td>
+                            <td>0.16% - 0.26%</td>
+                            <td>90+</td>
+                            <td>Très Élevée</td>
+                            <td>Moyenne</td>
+                            <td><span class="rating-badge">5.0/5</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Conseils pour Choisir</h2>
+                <p>Comment sélectionner la meilleure plateforme pour vos besoins.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Sécurité avant tout</h3>
+                    <p>Vérifiez les mesures de sécurité : 2FA, cold storage, assurance des fonds, audits réguliers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Comparez les frais</h3>
+                    <p>Les frais varient énormément. Comparez les frais de trading, de retrait et de dépôt.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Disponibilité géographique</h3>
+                    <p>Assurez-vous que la plateforme est disponible dans votre pays et supporte votre devise locale.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Variété d'actifs</h3>
+                    <p>Choisissez une plateforme qui propose les cryptomonnaies qui vous intéressent.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Expérience utilisateur</h3>
+                    <p>Testez l'interface. Elle doit être intuitive, surtout si vous êtes débutant.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Support client</h3>
+                    <p>Vérifiez la qualité et la disponibilité du support client (24/7 idéalement).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>BlockChain Future</h3>
+                    <p>Leader dans la technologie blockchain et les solutions cryptomonnaies innovantes.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens Rapides</h3>
+                    <a href="index.html">Accueil</a>
+                    <a href="about.html">À Propos</a>
+                    <a href="blockchain.html">Blockchain</a>
+                    <a href="crypto.html">Cryptomonnaies</a>
+                    <a href="exchanges.html">Échanges</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <a href="mining.html">Mining</a>
+                    <a href="wallet.html">Wallet</a>
+                    <a href="defi.html">DeFi</a>
+                    <a href="nft.html">NFT</a>
+                    <a href="security.html">Sécurité</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Abonnez-vous pour recevoir les dernières actualités.</p>
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Votre email">
+                        <button class="newsletter-btn">S'abonner</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 BlockChain Future. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
